@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import * 
+from . models import * 
 
 
 class ReactSerializer(serializers.ModelSerializer): 
@@ -7,4 +7,3 @@ class ReactSerializer(serializers.ModelSerializer):
         model = React 
         fields = ['employee' , "department"]
 
-        
