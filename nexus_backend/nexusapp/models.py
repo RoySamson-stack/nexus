@@ -2,5 +2,5 @@ from django.db import models
 
 # Create your models here.
 class React(models.Model):
-    employee = models.CharField(max_length-30)
+    employee = models.CharField(max_length=30)
     deaprtment = models.CharField(max_length=200)
