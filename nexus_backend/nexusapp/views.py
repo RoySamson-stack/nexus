@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from . models import *
+from .models import *
 from rest_framework.response import Response
-from . serializer import *
+from .serializer import *
 
 
 # Create your views here.
@@ -11,7 +11,7 @@ class ReactView(APIView):
         output = [{'employee': output.employee, 
                     'department': output.department}
         
-                    for output in React.object.all()]
+                    for output in React.objects.all()]
         return Response(output)            
     def post(self, request):
         serializer = ReactSerializer(data=request.data)
