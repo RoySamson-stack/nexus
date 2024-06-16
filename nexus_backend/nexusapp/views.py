@@ -8,17 +8,21 @@ from rest_framework import status
 
 # Create your views here.
 class UserView(APIView):
-    serializer_class =  UserSerializer
-
+    serializer_class =  UserProfileSerializer
+    
     def get(self, request):
-        output = [{'username': output.username, 'role': output.role}
-                     for output in User.objects.all()]
-        return Response(output)            
-
+        users = UserProfile.objects.all()
+        output = [{'username': output.username, 'organization': output.organization, 'role': output.role} for output in users]
+        return Response(output)  
+                
+    # def get(self, request):
+    #     users = UserProfile.objects.all()
+    #     serializer = UserProfileSerializer(users, many=True)
+    #     return Response(serializer.data)
 
     def post(self, request):
         # print(request.data)
-        serializer = UserSerializer(data=request.data)
+        serializer = UserProfileSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

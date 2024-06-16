@@ -25,6 +25,7 @@ class App extends React.Component {
             <div key={id}>
               <div>
                 <h2>{output.username}</h2>
+                <h2>{output.organization}</h2>
                 <h2>{output.role}</h2>
               </div>
             </div>

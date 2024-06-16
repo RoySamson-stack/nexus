@@ -3,13 +3,13 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class UserProfile(models.Model):
-    username = models.CharField(max_length=255, default='default_username')
+    username = models.CharField(max_length=255, unique=True)
     organization = models.CharField(max_length=255, default='default_organization')
     role = models.CharField(max_length=255)
 
 
     def __str__(self):
-        return f'{self.user.username} - {self.organization} - {self.role}'
+        return f'{self.username}'
 
 
 class ThreatIntelligenceModel(models.Model):
