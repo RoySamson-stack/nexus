@@ -21,5 +21,5 @@ from nexusapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ReactView.as_view(), name="react view")
+    path('', UserView.as_view(), name="react view")
 ]

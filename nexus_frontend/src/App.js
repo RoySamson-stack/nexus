@@ -13,7 +13,6 @@ class App extends React.Component {
         console.error("Error fetching data from Django:", err);
       });
   }
-
   render() {
     return (
       <div>

@@ -7,19 +7,19 @@ from rest_framework import status
 
 
 # Create your views here.
-class ReactView(APIView):
+class UserView(APIView):
 
-    serializer_class = ReactSerializer
+    serializer_class =  UserSerializer
 
     def get(self, request):
-        output = [{'employee': output.employee, 'department': output.department}
-                    for output in React.objects.all()]
+        user = [{'user': output.user, 'organizaton': output.organizaton, 'role': output.role}
+                     for output in User.objects.all()]
         return Response(output)            
 
 
     def post(self, request):
         # print(request.data)
-        serializer = ReactSerializer(data=request.data)
+        serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
