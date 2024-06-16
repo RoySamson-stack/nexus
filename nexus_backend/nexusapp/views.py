@@ -8,11 +8,10 @@ from rest_framework import status
 
 # Create your views here.
 class UserView(APIView):
-
     serializer_class =  UserSerializer
 
     def get(self, request):
-        user = [{'user': output.user, 'organizaton': output.organizaton, 'role': output.role}
+        output = [{'username': output.username, 'role': output.role}
                      for output in User.objects.all()]
         return Response(output)            
 
