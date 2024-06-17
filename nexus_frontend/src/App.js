@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import BugList from './BugList';
 import BugDetail from './BugDetails';
 import BugForm from './BugForm';
-import './App.css'
+import HomePage from './HomePage';
+import DataFromDjango from './DataFromDjango';
+import './App.css';
 
 const App = () => {
   // State for bug bounty page
@@ -16,7 +19,7 @@ const App = () => {
   const [selectedBug, setSelectedBug] = useState(null);
 
   const handleBugSelect = (bugId) => {
-    const bug = bugs.find(bug => bug.id === bugId);
+    const bug = bugs.find(b => b.id === bugId);
     setSelectedBug(bug);
   }
 
@@ -36,37 +39,27 @@ const App = () => {
       .catch(err => {
         console.error("Error fetching data from Django:", err);
       });
-  }, []); // Empty dependency array ensures useEffect runs only once on component mount
+  }, []);
 
   return (
-    <div className="app">
-      <Header />
-      <main>
-        {/* Bug Bounty Page Components */}
-        <BugList bugs={bugs} onBugSelect={handleBugSelect} />
-        {selectedBug && <BugDetail bug={selectedBug} />}
-        <BugForm onSubmit={handleBugSubmit} />
-
-        {/* Data from Django Components */}
-        <div>
-          <header>Data from Django</header>
-          <hr />
-          {details.length === 0 ? (
-            <div>No data available</div>
-          ) : (
-            details.map((output, id) => (
-              <div key={id}>
-                <div>
-                  <h2>{output.username}</h2>
-                  <h2>{output.organization}</h2>
-                  <h2>{output.role}</h2>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-      </main>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/bug-bounty" element={
+              <>
+                <BugList bugs={bugs} onBugSelect={handleBugSelect} />
+                {selectedBug && <BugDetail bug={selectedBug} />}
+                <BugForm onSubmit={handleBugSubmit} />
+              </>
+            } />
+            <Route path="/data-from-django" element={<DataFromDjango details={details} />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
