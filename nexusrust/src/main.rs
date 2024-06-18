@@ -22,7 +22,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(Cors::permissive())
             .route("/modules", web::get().to(get_modules))
     })
-    .bind("127.0.0.1:8081")?
+    .bind("127.0.0.1:8082")?
     .run()
     .await
 }

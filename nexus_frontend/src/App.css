@@ -301,3 +301,31 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+.rust-modules {
+  text-align: center;
+  padding: 20px;
+}
+
+.rust-modules h1 {
+  margin-bottom: 20px;
+}
+
+.rust-modules ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rust-modules li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #666;
+}
