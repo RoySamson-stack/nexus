@@ -14,8 +14,33 @@ const Homepage = () => {
                     </header>
                 </div>
             </div>
-            <div className="">
-                
+            <div className="about-us">
+                <h1>What new about us ?</h1>
+                <div className='about-card-container'>
+                    <div className="about-card">
+                        one
+                    </div>
+                    <div className="about-card">
+                        two
+                    </div>
+                    <div className="about-card">
+                        three
+                    </div>
+                </div>
+
+            </div>
+            <div className='services'>
+                <h1>Get your threat intelligence with Secure Threat platform</h1>
+                <p className="">Minimize your threat exposure with the secure Threat Intelligence PLatform.<br></br>
+                Take a proactive approach to application security theough comprehensive attack surface management, <br></br>
+                continuous asset training and security coverage validation
+                </p>
+            </div>
+            <div className='end-credit'>
+                <div className='card'>Platform</div>
+                <div className=''>Solutions</div>
+                <div className=''>Industries</div>
+                <div className="">Company</div>
             </div>
         </div>
     );
