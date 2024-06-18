@@ -7,6 +7,7 @@ import BugDetail from './BugDetails';
 import BugForm from './BugForm';
 import HomePage from './HomePage';
 import DataFromDjango from './DataFromDjango';
+import RustModules from './RustModules';
 import './App.css';
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/platform" element={<RustModules/>}/>
             <Route path="/bug-bounty" element={
               <>
                 <BugList bugs={bugs} onBugSelect={handleBugSelect} />
@@ -57,6 +59,7 @@ const App = () => {
             } />
             <Route path="/data-from-django" element={<DataFromDjango details={details} />} />
           </Routes>
+          
         </main>
       </div>
     </Router>
