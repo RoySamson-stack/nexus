@@ -19,27 +19,38 @@ const Homepage = () => {
                 <h1>What new about us ?</h1>
                 <div className='about-card-container'>
                     <div className="about-card">
-                        one
+                        <h1>Real time threat monitoring</h1>
+                        <p>Continous monitoring of servces and cloud environments for potental threats and anomalies</p>
                     </div>
                     <div className="about-card">
-                        two
+                        <h1>Secure data Exchange</h1>
+                        <p>Secure and encrypted exchange of treat intelligence data between organizations</p>
                     </div>
                     <div className="about-card">
-                        three
+                        <h1>Federated Threat intelligence Sharing</h1>
+                        <p>Decentralized architecture allowing organization to share threat inteligence while retaining control over their data</p>
+                    </div>
+                    <div className="about-card">
+                        <h1>Threat intelligence feed</h1>
+                        <p>Access to curated and updated threat inteligence feeds</p>
                     </div>
                 </div>
 
             </div>
+            <div className="hackers">
+                <h1>For hackers: Earn, Learn and Attack. Make the cyber space cyber safe</h1>
+            </div>
             <div className='services'>
                 <h1>Get your threat intelligence with Secure Threat platform</h1>
                 <p className="">Minimize your threat exposure with the secure Threat Intelligence PLatform.<br></br>
-                Take a proactive approach to application security theough comprehensive attack surface management, <br></br>
-                continuous asset training and security coverage validation
+                    Take a proactive approach to application security theough comprehensive attack surface management, <br></br>
+                    continuous asset training and security coverage validation
                 </p>
                 <a href="#">Explore the platform</a>
                 <br></br>
-                <img src={platformImg} className="platformImage" alt="platform-img"/>
+                <img src={platformImg} className="platformImage" alt="platform-img" />
             </div>
+
             <div className='end-credit'>
                 <div className='card'>Platform</div>
                 <div className=''>Solutions</div>

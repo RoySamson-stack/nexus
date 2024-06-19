@@ -74,10 +74,12 @@ body {
 .about-us {
   text-align: center;
   padding: 20px;
+  height: 60vh;
 }
 
 .about-us h1 {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .about-card-container {
@@ -108,11 +110,28 @@ body {
     width: calc(100% - 40px); 
   }
 }
+.hackers{
+  background-color: #0C0032;
+  color: white;
+  font-weight: 300;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 250px;
+  width:100%;
+}
+.hackers h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .end-credit {
   background-color: #0C0032;
   color: white;
-  height: 50vh;
+  height: 40vh;
   padding-bottom: 30px;
 }
 .services{
