@@ -113,10 +113,17 @@ body {
   background-color: #0C0032;
   color: white;
   height: 50vh;
+  padding-bottom: 30px;
 }
 .services{
   text-align: center;
   padding: 20px;
+}
+.platformImage{
+  padding-top: 20px;
+  width: 50rem;
+
+  height: 30rem;
 }
 
 /* styling for the header */
