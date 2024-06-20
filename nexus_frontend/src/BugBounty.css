@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .app {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .side-nav {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .side-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-nav li {
+    margin: 15px 0;
+  }
+  
+  .side-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-nav li {
+    margin: 0 10px;
+  }
+  
+  .top-nav a {
+    text-decoration: none;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .bugs {
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .bug-list {
+    margin-bottom: 20px;
+  }
+  
+  .bug-list div {
+    background: #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  .bug-detail {
+    background: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .bug-form input,
+  .bug-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  .bug-form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .side-nav {
+      width: 100px;
+    }
+  
+    .top-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

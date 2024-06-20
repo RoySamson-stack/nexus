@@ -129,10 +129,16 @@ body {
 }
 
 .end-credit {
-  background-color: #0C0032;
-  color: white;
+  /* background-color: #0C0032;
+  color: white; */
+  display: flex;
+  justify-content: center;
   height: 40vh;
   padding-bottom: 30px;
+}
+.end-credit h1{
+  padding-left: 20px;
+  font-size: 20px;
 }
 .services{
   text-align: center;
@@ -191,8 +197,13 @@ section {
 }
 
 /* Bug List Styles */
+.bugs{
+  width: 100vw;
+
+}
 .bug-list {
   list-style-type: none;
+  width: 100%;
   padding: 0;
 }
 

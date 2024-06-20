@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
-import BugList from './BugList';
-import BugDetail from './BugDetails';
-import BugForm from './BugForm';
+import BugBounty from './BugBounty'
+// import BugList from './BugList';
+// import BugDetail from './BugDetails';
+// import BugForm from './BugForm';
 import HomePage from './HomePage';
 import DataFromDjango from './DataFromDjango';
 import RustModules from './RustModules';
@@ -51,11 +52,12 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/platform" element={<RustModules/>}/>
             <Route path="/bug-bounty" element={
-              <>
-                <BugList bugs={bugs} onBugSelect={handleBugSelect} />
-                {selectedBug && <BugDetail bug={selectedBug} />}
-                <BugForm onSubmit={handleBugSubmit} />
-              </>
+              <BugBounty />
+              // <div className="bugs">
+              //   <BugList bugs={bugs} onBugSelect={handleBugSelect} />
+              //   {selectedBug && <BugDetail bug={selectedBug} />}
+              //   <BugForm onSubmit={handleBugSubmit} />
+              // </div>
             } />
             <Route path="/data-from-django" element={<DataFromDjango details={details} />} />
           </Routes>

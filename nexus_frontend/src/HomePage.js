@@ -52,10 +52,18 @@ const Homepage = () => {
             </div>
 
             <div className='end-credit'>
-                <div className='card'>Platform</div>
-                <div className=''>Solutions</div>
-                <div className=''>Industries</div>
-                <div className="">Company</div>
+                <div className=''>
+                    <h1>Platform</h1>
+                </div>
+                <div className=''>
+                    <h1>Solutions</h1>
+                </div>
+                <div className=''>
+                    <h1>Industries</h1>
+                </div>
+                <div className="">
+                    <h1>Company</h1>
+                </div>
             </div>
         </div>
     );
