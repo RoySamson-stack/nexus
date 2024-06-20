@@ -46,7 +46,7 @@ const Homepage = () => {
                     Take a proactive approach to application security theough comprehensive attack surface management, <br></br>
                     continuous asset training and security coverage validation
                 </p>
-                <a href="#">Explore the platform</a>
+                <a href="/platform">Explore the platform</a>
                 <br></br>
                 <img src={platformImg} className="platformImage" alt="platform-img" />
             </div>

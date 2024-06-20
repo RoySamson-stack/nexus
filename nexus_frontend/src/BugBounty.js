@@ -44,7 +44,11 @@ const TopNav = () => (
     </>
 );
 
+
 const CompanyCards = ({ companies }) => (
+
+
+   
     <div className="company-cards">
         <h2>Companies in Bug Bounty Program</h2>
         <div className="card-container">
@@ -52,6 +56,7 @@ const CompanyCards = ({ companies }) => (
                 <div key={company.id} className="company-card">
                     <h3>{company.name}</h3>
                     <p>{company.description}</p>
+                    <button className="details-btn">See details</button>
                 </div>
             ))}
         </div>
@@ -83,6 +88,7 @@ const App = () => {
             <SideNav />
             <div className="main-content">
                 <TopNav />
+
                 <CompanyCards companies={companies} />
             </div>
         </div>
