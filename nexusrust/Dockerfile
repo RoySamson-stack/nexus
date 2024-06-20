@@ -25,4 +25,4 @@ RUN cargo build --release
 EXPOSE 8082
 
 # Run the application
-CMD ["./target/release/your_app_name"]
+CMD ["./target/release/nexusrust"]

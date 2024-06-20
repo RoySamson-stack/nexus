@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  actix-web-server:
-    build: .
+  nexusrust:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8082:8082"
-    environment:
-      - RUST_LOG=actix_web=info
