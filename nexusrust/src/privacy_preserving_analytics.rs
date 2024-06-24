@@ -8,6 +8,7 @@ impl PrivacyPreservingAnalytics {
     }
 
     pub fn analyze_data(&self) {
+        println!("Analyzing data privately...");
         info!("Analyzing data with privacy-preserving techniques...");
         // Mock analysis technique
         let data = vec![1, 2, 3, 4, 5];

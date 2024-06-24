@@ -8,6 +8,7 @@ impl SecureExchange {
     }
 
     pub fn exchange_data(&self) {
+        println!("Executing secure data exchange...");
         info!("Exchanging data securely using mock cryptographic techniques...");
         // Mock cryptographic technique
         let encrypted_data = self.mock_encrypt("sensitive threat data");

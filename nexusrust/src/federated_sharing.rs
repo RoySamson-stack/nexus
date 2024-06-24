@@ -16,6 +16,7 @@ impl FederatedSharing {
     }
 
     pub fn share_threat_intelligence(&self) {
+        println!("Sharing threat intelligence...");
         info!("Sharing threat intelligence in a federated manner...");
         let ti = ThreatIntelligence {
             id: 1,
