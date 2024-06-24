@@ -1,18 +1,17 @@
 [package]
 name = "nexusrust"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 
+
+#dependacies
 [dependencies]
-actix-web = "4"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-actix-cors = "0.7.0"
-
-
-# [workspace]
-# members = ["ne", "nexus_frontend"]
-
-[[bin]]
-name = "nexusrust"
-path = "src/main.rs"
+sysinfo = "0.30.12"
+reqwest = { version = "0.11", features = ["blocking"] }
+lettre = "0.11.7"
+ring = "0.17.8"
+chrono = "0.4"
+log = "0.4"
+env_logger = "0.11.3"
